@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>org-mode &amp; reveal.js</title>
+<meta name="author" content="(@0x7cc)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/serif.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">org-mode &amp; reveal.js</h1><h2 class="author">@0x7cc</h2><p class="date">Created: 2018-07-07 Sat 11:17</p>
+</section>
+
+<section>
+<section id="slide-orgdbb7e4c">
+<h2 id="orgdbb7e4c">Why?</h2>
+<p>
+Because of this <a href="https://twitter.com/zamansky/status/1013148531840946176">tweet</a>:
+</p>
+
+
+<div id="org42ca645" class="figure">
+<p><img src="images/tweet.png" alt="tweet.png" />
+</p>
+</div>
+
+<p>
+<b><b>Thank you</b></b> <a href="https://twitter.com/zamansky">@zamansky</a>.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc687d21">
+<h2 id="orgc687d21">Emacs Setup up!</h2>
+<p>
+Press Down Arrow!!!
+</p>
+</section>
+<section id="slide-orgecaa644">
+<h4 id="orgecaa644">Install ox-revel</h4>
+<div class="org-src-container">
+
+<pre  class="src src-elisp"><span style="color: #5C7E81;">(</span><span style="color: #DD6F48;">use-package</span> <span style="color: #BBAA97;">ox-reveal</span>
+  <span style="color: #FE8019;">:ensure</span> <span style="color: #C5DFE5;">t</span>
+  <span style="color: #FE8019;">:config</span>
+  <span style="color: #837486;">(</span><span style="color: #DD6F48;">progn</span>
+    <span style="color: #9C6F68;">(</span><span style="color: #DD6F48;">setq</span> <span style="color: #CAE5C5;">org-reveal-root</span> <span style="color: #528B8B;">"http://cdn.jsdelivr.net/reveal.js/3.0.0/"</span><span style="color: #9C6F68;">)</span>
+    <span style="color: #9C6F68;">(</span><span style="color: #DD6F48;">setq</span> <span style="color: #DFE5C5;">org-reveal-mathjax</span> <span style="color: #C5DFE5;">t</span><span style="color: #9C6F68;">)</span><span style="color: #837486;">)</span><span style="color: #5C7E81;">)</span>
+</pre>
+</div>
+</section>
+<section id="slide-org8a1a39e">
+<h4 id="org8a1a39e">Install htmlize</h4>
+<div class="org-src-container">
+
+<pre  class="src src-elisp"><span style="color: #5C7E81;">(</span><span style="color: #DD6F48;">use-package</span> <span style="color: #BBAA97;">htmlize</span>
+  <span style="color: #FE8019;">:ensure</span> <span style="color: #C5DFE5;">t</span><span style="color: #5C7E81;">)</span>
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbe40654">
+<h2 id="orgbe40654">Create the presentation</h2>
+<div class="outline-text-2" id="text-orgbe40654">
+</div>
+</section>
+<section id="slide-org0c36f77">
+<h3 id="org0c36f77">New file: index.org</h3>
+<p>
+Header for this <code>index.org</code> presentation
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-org"><span style="color: #D5C4A1; font-weight: bold;">#+TITLE:</span>     <span style="color: #3FD7E5; font-weight: bold;">Try ox-reveal</span>
+<span style="color: #D5C4A1; font-weight: bold;">#+AUTHOR:</span>    <span style="color: #C5E5DF;">Lenilson Jose Dias</span>
+<span style="color: #D5C4A1; font-weight: bold;">#+EMAIL:</span>     <span style="color: #C5E5DF;">lenilson@gmail.com</span>
+<span style="color: #7C6F64;">#+OPTIONS: toc:nil num:nil</span>
+<span style="color: #7C6F64;">#+REVEAL_ROOT: <a href="https://cdn.jsdelivr.net/reveal.js/3.0.0/">https://cdn.jsdelivr.net/reveal.js/3.0.0/</a></span>
+<span style="color: #7C6F64;">#+REVEAL_THEME: serif</span>
+</pre>
+</div>
+</section>
+<section id="slide-org8a4e3ab">
+<h3 id="org8a4e3ab">Choose the Theme</h3>
+<div class="org-src-container">
+
+<pre  class="src src-org"><span style="color: #7C6F64;">#+REVEAL_THEME: serif</span>
+</pre>
+</div>
+
+<p>
+Reveal.js <a href="https://github.com/hakimel/reveal.js/tree/master/css/theme">themes</a>.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org7e2dc53">
+<h2 id="org7e2dc53">Resources</h2>
+<ul>
+<li>Mike Zamansky <a href="http://cestlaz.github.io/posts/using-emacs-50-presentations/">post</a></li>
+<li><a href="https://github.com/hexmode/ox-reveal">ox-reveal</a></li>
+<li><a href="https://github.com/hakimel/reveal.js">reveal.js</a></li>
+<li><a href="https://github.com/hakimel/reveal.js/tree/master/css/theme">reveal.js themes</a></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgaf03849">
+<h2 id="orgaf03849">Thanks You!</h2>
+<p>
+<a href="https://twitter.com/0x7cc">@0x7cc</a>
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+#+TITLE: org-mode & reveal.js
+#+AUTHOR: @0x7cc
+#+EMAIL: lenilson@gmail.com
+#+OPTIONS: toc:nil num:nil
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: serif
+
+* Why?
+
+  Because of this [[https://twitter.com/zamansky/status/1013148531840946176][tweet]]:
+
+  #+NAME:   fig:SED-HR4049
+  [[file:images/tweet.png]]
+
+  **Thank you** [[https://twitter.com/zamansky][@zamansky]].
+
+* Emacs Setup up!
+  Press Down Arrow!!!
+*** Install ox-revel
+    #+BEGIN_SRC elisp
+      (use-package ox-reveal
+	:ensure t
+	:config
+	(progn
+	  (setq org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/")
+	  (setq org-reveal-mathjax t)))
+    #+END_SRC
+*** Install htmlize
+    #+BEGIN_SRC elisp
+      (use-package htmlize
+	:ensure t)
+    #+END_SRC
+
+* Create the presentation
+** New file: index.org
+   Header for this ~index.org~ presentation
+   #+BEGIN_SRC org
+     ,#+TITLE:     Try ox-reveal
+     ,#+AUTHOR:    Lenilson Jose Dias
+     ,#+EMAIL:     lenilson@gmail.com
+     ,#+OPTIONS: toc:nil num:nil
+     ,#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+     ,#+REVEAL_THEME: serif
+   #+END_SRC
+** Choose the Theme
+
+   #+BEGIN_SRC org
+     ,#+REVEAL_THEME: serif
+   #+END_SRC
+
+   Reveal.js [[https://github.com/hakimel/reveal.js/tree/master/css/theme][themes]].
+* Resources
+
+  * Mike Zamansky [[http://cestlaz.github.io/posts/using-emacs-50-presentations/][post]]
+  * [[https://github.com/hexmode/ox-reveal][ox-reveal]]
+  * [[https://github.com/hakimel/reveal.js][reveal.js]]
+  * [[https://github.com/hakimel/reveal.js/tree/master/css/theme][reveal.js themes]]
+
+* Thanks You!
+
+  [[https://twitter.com/0x7cc][@0x7cc]]
