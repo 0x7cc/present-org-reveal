@@ -66,6 +66,7 @@
   * [[https://github.com/hexmode/ox-reveal][ox-reveal]]
   * [[https://github.com/hakimel/reveal.js][reveal.js]]
   * [[https://github.com/hakimel/reveal.js/tree/master/css/theme][reveal.js themes]]
+  * This presentation [[https://github.com/0x7cc/present-org-reveal/][source code]]
 
 * Thanks You!
 
