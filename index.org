@@ -1,6 +1,6 @@
 #+TITLE: org-mode & reveal.js
 #+AUTHOR: @0x7cc
-#+EMAIL: lenilson@gmail.com
+#+EMAIL: lenny@0x7cc.net
 #+OPTIONS: toc:nil num:nil
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_THEME: serif
