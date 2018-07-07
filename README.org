@@ -1,6 +1,11 @@
 * Present with org-reveal
 
-  Presenting using org-reveal.
+  Presenting using org-reveal. See it [[https://0x7cc.github.io/present-org-reveal/][here.]]
 
 ** Author
-   Lenilson Jose Dias <lenny@0x7cc.net>
+
+   Lenilson Jose Dias [[mailto:lenny@0x7cc.net][lenny@0x7cc.net]]
+
+** License
+
+Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
