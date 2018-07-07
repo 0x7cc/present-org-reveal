@@ -49,6 +49,17 @@
    #+END_SRC
 
    Reveal.js [[https://github.com/hakimel/reveal.js/tree/master/css/theme][themes]].
+* Export to HTML
+** Start Reveal.js Exporting
+   At Emacs: *C-c C-e* and you'll see:
+
+   [[file:images/export-1.png]]
+
+** Choose Export Options
+   [[file:images/export-2.png]]
+
+   For presenting press *B*.
+
 * Resources
 
   * Mike Zamansky [[http://cestlaz.github.io/posts/using-emacs-50-presentations/][post]]
