@@ -37,7 +37,7 @@
    #+BEGIN_SRC org
      ,#+TITLE:     Try ox-reveal
      ,#+AUTHOR:    Lenilson Jose Dias
-     ,#+EMAIL:     lenilson@gmail.com
+     ,#+EMAIL:     to@lnlsn.dev
      ,#+OPTIONS: toc:nil num:nil
      ,#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
      ,#+REVEAL_THEME: serif
